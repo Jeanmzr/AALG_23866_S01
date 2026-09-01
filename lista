@@ -1,0 +1,11 @@
+lista = ["Ichigo" , "kempachi" , "aizen" , "remy" ]
+lista[3] = "rukia"
+print(lista[1:])
+for index, item in enumerate(lista):
+   print (f"index: {index} - item ")
+
+
+
+print ("aizen" in lista)
+v1, v2, v3, v4 = ["Ichigo" , "kempachi" , "Krillin" , "Freezer" ]
+print (v1, v2, v3, v4)

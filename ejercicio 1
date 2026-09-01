@@ -1,0 +1,62 @@
+personas = []
+def agregar():
+    nombre = input("Ingresa tu nombre: ").strip()
+    apellido = input("Ingresa tu apellido: ").strip()
+ 
+    if nombre == "" or apellido == "":
+        print("\n⚠ El nombre y el apellido no pueden estar vacíos.\n")
+        return
+ 
+    dato = f"{nombre} {apellido}"
+    personas.append(dato)
+    print(f"\n✔ Se agregó: {dato}\n")
+ 
+def listar():
+    print("\n--- Lista de personas ---")
+    if len(personas) == 0:
+        print("No hay personas registradas.")
+    else:
+        for i, persona in enumerate(personas, start=1):
+            print(f"{i}. {persona}")
+    print("--------------------------\n")
+ 
+def borrar():
+    if len(personas) == 0:
+        print("\n⚠ No hay personas registradas para borrar.\n")
+        return
+ 
+    texto = input("Ingrese el nombre y apellido a borrar (tal como aparece en la lista): ").strip()
+ 
+    if texto in personas:
+        personas.remove(texto)
+        print(f"\n✔ Se borró: {texto}\n")
+    else:
+        print(f"\n⚠ No se encontró '{texto}' en la lista.\n")
+ 
+def mostrar_menu():
+    print("========= MENÚ =========")
+    print("1. Agregar")
+    print("2. Listar")
+    print("3. Borrar")
+    print("4. Fin")
+    print("=========================")
+ 
+def main():
+    while True:
+        mostrar_menu()
+        opcion = input("Seleccione una opción (1-4): ").strip()
+ 
+        if opcion == "1":
+            agregar()
+        elif opcion == "2":
+            listar()
+        elif opcion == "3":
+            borrar()
+        elif opcion == "4":
+            print("\nPrograma finalizado. ¡Hasta luego!")
+            break
+        else:
+            print("\n⚠ Opción no válida. Intente nuevamente.\n")
+ 
+if __name__ == "__main__":
+    main()

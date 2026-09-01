@@ -1,0 +1,10 @@
+print ("ingrese su nombre")
+nom = float(input())
+print ("ingrese sus horas trabajadas")
+suel = int(input())
+sueldo = suel * 25
+sueldesc = sueldo * 0.05
+suelrest =  sueldo - sueldesc
+print ("su sueldo bruto es: ", sueldo )
+print ("su descuento es: ", sueldesc )
+print ("su sueldo restante es", suelrest )

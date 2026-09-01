@@ -1,0 +1,10 @@
+def nombre() ->str:
+    for x in range(5): #[0,1,2,3,4]
+        texto += f"Carlos{x},"
+        return texto
+print(nombre())
+def datos():
+    return "carlos", 20
+print (nombre())
+nom, edad = datos()
+print(nom, edad)
